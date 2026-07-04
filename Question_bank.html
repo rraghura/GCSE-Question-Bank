@@ -248,7 +248,8 @@
     </div>
 </div>
 
-<!-- SUBJECT SELECTION PAGE -->
+
+
 <div id="subjectPage" class="container hidden">
     <h2>Select a GCSE Subject</h2>
     <p style="text-align:center;">Choose a subject to start mixed questions.</p>
@@ -335,6 +336,9 @@
 
 
 <script>
+
+
+
     // Navigation helpers
     function showSignup() {
         signupPage.classList.remove("hidden");
@@ -1010,8 +1014,359 @@ physicsQuestions.push(
     { type:"short", q:"Define 'upthrust'.", answer:"Upward force on an object in fluid", hint:"Buoyancy.", explain:"Causes floating." },
 );
 const geographyQuestions = [];
+geographyQuestions.push(
+
+    // NATURAL HAZARDS (1–15)
+    { type: "mcq", question: "What type of plate boundary causes earthquakes?", options: ["Conservative", "Constructive", "Destructive"], answer: "Conservative" },
+    { type: "short", question: "Define a natural hazard.", answer: "A natural event that threatens people or property." },
+    { type: "fill", question: "The point inside the Earth where an earthquake starts is called the ________.", answer: "Focus" },
+    { type: "tf", question: "Volcanoes only occur at destructive plate boundaries.", answer: "False" },
+    { type: "mcq", question: "What scale measures earthquake magnitude?", options: ["Richter", "Beaufort", "Mercalli"], answer: "Richter" },
+    { type: "short", question: "What is a tectonic plate?", answer: "A large slab of the Earth's crust." },
+    { type: "fill", question: "The ________ is the point on the surface directly above the earthquake focus.", answer: "Epicentre" },
+    { type: "tf", question: "LICs are usually more vulnerable to natural hazards.", answer: "True" },
+    { type: "mcq", question: "Which hazard is caused by intense rainfall?", options: ["Flooding", "Drought", "Wildfire"], answer: "Flooding" },
+    { type: "short", question: "Name one primary effect of an earthquake.", answer: "Buildings collapsing" },
+    { type: "short", question: "Name one secondary effect of a volcanic eruption.", answer: "Disease spread" },
+    { type: "mcq", question: "What type of volcano is Mount St Helens?", options: ["Shield", "Composite", "Dome"], answer: "Composite" },
+    { type: "tf", question: "Tsunamis are caused by underwater earthquakes.", answer: "True" },
+    { type: "fill", question: "A ________ is a long-term plan to reduce hazard impacts.", answer: "Mitigation" },
+    { type: "short", question: "What is hazard risk?", answer: "The chance of being affected by a hazard." },
+
+    // CLIMATE CHANGE (16–25)
+    { type: "mcq", question: "Which gas contributes most to global warming?", options: ["CO2", "Oxygen", "Nitrogen"], answer: "CO2" },
+    { type: "short", question: "Define the greenhouse effect.", answer: "Trapping heat in the atmosphere by greenhouse gases." },
+    { type: "tf", question: "Climate change only affects temperature.", answer: "False" },
+    { type: "fill", question: "Rising sea levels are caused by melting ________.", answer: "Ice caps" },
+    { type: "mcq", question: "Which human activity increases methane emissions?", options: ["Farming cattle", "Driving cars", "Using electricity"], answer: "Farming cattle" },
+    { type: "short", question: "Name one environmental impact of climate change.", answer: "More extreme weather" },
+    { type: "short", question: "Name one way to reduce carbon emissions.", answer: "Using renewable energy" },
+    { type: "tf", question: "Climate change affects both HICs and LICs.", answer: "True" },
+    { type: "fill", question: "The Paris Agreement aims to limit global warming to ________ degrees.", answer: "1.5" },
+    { type: "mcq", question: "Which energy source is renewable?", options: ["Coal", "Oil", "Solar"], answer: "Solar" },
+
+    // RIVERS (26–40)
+    { type: "short", question: "Define erosion.", answer: "Wearing away of material." },
+    { type: "mcq", question: "Which process involves rocks scraping the river bed?", options: ["Abrasion", "Attrition", "Solution"], answer: "Abrasion" },
+    { type: "fill", question: "A river’s ________ is the area it drains.", answer: "Drainage basin" },
+    { type: "tf", question: "Meanders form in the upper course of a river.", answer: "False" },
+    { type: "mcq", question: "What landform is created by deposition?", options: ["Waterfall", "Floodplain", "Gorge"], answer: "Floodplain" },
+    { type: "short", question: "What is a levee?", answer: "A raised bank along a river." },
+    { type: "short", question: "Name one cause of flooding.", answer: "Heavy rainfall" },
+    { type: "tf", question: "Hard engineering is usually more expensive than soft engineering.", answer: "True" },
+    { type: "fill", question: "The outside bend of a meander has ________ erosion.", answer: "More" },
+    { type: "mcq", question: "Which feature forms where a river meets the sea?", options: ["Delta", "Gorge", "V-shaped valley"], answer: "Delta" },
+    { type: "short", question: "What is hydraulic action?", answer: "Water forcing air into cracks." },
+    { type: "short", question: "Name one soft engineering method.", answer: "Flood warnings" },
+    { type: "tf", question: "Dams can generate hydroelectric power.", answer: "True" },
+    { type: "fill", question: "A ________ valley is typical of the upper course.", answer: "V-shaped" },
+    { type: "mcq", question: "Which process breaks rocks by chemical reactions?", options: ["Solution", "Abrasion", "Attrition"], answer: "Solution" },
+
+    // COASTS (41–55)
+    { type: "short", question: "Define longshore drift.", answer: "Movement of sediment along the coast." },
+    { type: "mcq", question: "What landform is created by erosion?", options: ["Spit", "Stack", "Beach"], answer: "Stack" },
+    { type: "fill", question: "A spit forms when sediment is deposited by ________.", answer: "Longshore drift" },
+    { type: "tf", question: "Soft rock erodes faster than hard rock.", answer: "True" },
+    { type: "mcq", question: "Which feature forms in alternating hard and soft rock?", options: ["Headlands and bays", "Spits", "Tombolos"], answer: "Headlands and bays" },
+    { type: "short", question: "What is a bar?", answer: "A spit that connects two headlands." },
+    { type: "short", question: "Name one coastal management strategy.", answer: "Sea walls" },
+    { type: "tf", question: "Groynes stop longshore drift.", answer: "True" },
+    { type: "fill", question: "A ________ is an arch that has collapsed.", answer: "Stack" },
+    { type: "mcq", question: "Which process smooths pebbles?", options: ["Attrition", "Abrasion", "Solution"], answer: "Attrition" },
+    { type: "short", question: "What is a wave-cut platform?", answer: "A flat rock surface left after cliff retreat." },
+    { type: "short", question: "Name one cause of coastal erosion.", answer: "Strong waves" },
+    { type: "tf", question: "Rising sea levels increase coastal flooding.", answer: "True" },
+    { type: "fill", question: "A ________ is a sheltered area behind a spit.", answer: "Salt marsh" },
+    { type: "mcq", question: "Which type of wave causes deposition?", options: ["Constructive", "Destructive"], answer: "Constructive" },
+
+    // URBAN ISSUES (56–70)
+    { type: "short", question: "Define urbanisation.", answer: "Growth of cities." },
+    { type: "mcq", question: "What is a push factor?", options: ["Jobs", "War", "Entertainment"], answer: "War" },
+    { type: "fill", question: "A ________ is an area of poor-quality housing.", answer: "Slum" },
+    { type: "tf", question: "Rural areas always have higher population density.", answer: "False" },
+    { type: "mcq", question: "Which city is a megacity?", options: ["Lagos", "Bristol", "Cardiff"], answer: "Lagos" },
+    { type: "short", question: "What is urban sprawl?", answer: "Expansion of cities into rural areas." },
+    { type: "short", question: "Name one environmental problem in cities.", answer: "Air pollution" },
+    { type: "tf", question: "Public transport reduces congestion.", answer: "True" },
+    { type: "fill", question: "Sustainable cities aim to reduce ________ emissions.", answer: "Carbon" },
+    { type: "mcq", question: "Which is a pull factor?", options: ["Flooding", "Poverty", "Education"], answer: "Education" },
+    { type: "short", question: "What is regeneration?", answer: "Improving run-down urban areas." },
+    { type: "short", question: "Name one challenge of rapid urbanisation.", answer: "Overcrowding" },
+    { type: "tf", question: "Green spaces improve mental health.", answer: "True" },
+    { type: "fill", question: "A ________ is a city with over 10 million people.", answer: "Megacity" },
+    { type: "mcq", question: "Which city is known for the Dharavi slum?", options: ["Mumbai", "Lagos", "Rio"], answer: "Mumbai" },
+
+    // ECOSYSTEMS (71–80)
+    { type: "short", question: "Define ecosystem.", answer: "A community of living and non-living things." },
+    { type: "mcq", question: "Which biome is hot and dry?", options: ["Desert", "Tundra", "Rainforest"], answer: "Desert" },
+    { type: "fill", question: "The Amazon is an example of a ________ rainforest.", answer: "Tropical" },
+    { type: "tf", question: "Biodiversity is highest in rainforests.", answer: "True" },
+    { type: "mcq", question: "Which factor affects biome distribution?", options: ["Latitude", "Population", "GDP"], answer: "Latitude" },
+    { type: "short", question: "What is deforestation?", answer: "Cutting down forests." },
+    { type: "short", question: "Name one threat to rainforests.", answer: "Logging" },
+    { type: "tf", question: "Desert plants are adapted to store water.", answer: "True" },
+    { type: "fill", question: "A ________ is a layer of leaves at the top of the rainforest.", answer: "Canopy" },
+    { type: "mcq", question: "Which biome has permafrost?", options: ["Tundra", "Desert", "Savannah"], answer: "Tundra" },
+
+    // DEVELOPMENT (81–90)
+    { type: "short", question: "Define development.", answer: "Improvement in quality of life." },
+    { type: "mcq", question: "Which is a measure of development?", options: ["HDI", "GDP", "Both"], answer: "Both" },
+    { type: "fill", question: "A ________ country has high income levels.", answer: "HIC" },
+    { type: "tf", question: "LICs usually have lower life expectancy.", answer: "True" },
+    { type: "mcq", question: "Which factor affects development?", options: ["Education", "Weather", "Soil"], answer: "Education" },
+    { type: "short", question: "What is aid?", answer: "Help given by one country to another." },
+    { type: "short", question: "Name one reason for uneven development.", answer: "Colonialism" },
+    { type: "tf", question: "Fairtrade helps farmers earn more.", answer: "True" },
+    { type: "fill", question: "A ________ is a country experiencing rapid economic growth.", answer: "NEE" },
+    { type: "mcq", question: "Which country is an NEE?", options: ["Nigeria", "Japan", "Norway"], answer: "Nigeria" },
+
+    // MAP SKILLS & POPULATION (91–100)
+    { type: "short", question: "Define population density.", answer: "Number of people per km²." },
+    { type: "mcq", question: "What does a contour line show?", options: ["Height", "Temperature", "Rainfall"], answer: "Height" },
+    { type: "fill", question: "A ________ graph shows population structure.", answer: "Pyramid" },
+    { type: "tf", question: "Birth rates are usually higher in LICs.", answer: "True" },
+    { type: "mcq", question: "Which direction is 180°?", options: ["North", "South", "East"], answer: "South" },
+    { type: "short", question: "What is migration?", answer: "Movement of people from one place to another." },
+    { type: "short", question: "Name one reason for population growth.", answer: "High birth rates" },
+    { type: "tf", question: "Grid references help locate places on a map.", answer: "True" },
+    { type: "fill", question: "A ________ reference uses six digits.", answer: "Six-figure" },
+    { type: "mcq", question: "Which map symbol shows a church?", options: ["Cross", "Triangle", "Square"], answer: "Cross" }
+
+);
+
 const historyQuestions = [];
+historyQuestions.push(
+
+    // MEDIEVAL & EARLY MODERN (1–15)
+    { type: "mcq", question: "In what year did the Battle of Hastings take place?", options: ["1066", "1215", "1485"], answer: "1066" },
+    { type: "short", question: "Who led the Norman invasion of England?", answer: "William the Conqueror" },
+    { type: "fill", question: "The ________ Charter was signed in 1215.", answer: "Magna" },
+    { type: "tf", question: "The Black Death reached England in 1348.", answer: "True" },
+    { type: "mcq", question: "What percentage of Europe died from the Black Death?", options: ["10%", "30–50%", "80%"], answer: "30–50%" },
+    { type: "short", question: "Name one symptom of the Black Death.", answer: "Buboes" },
+    { type: "fill", question: "The Peasants’ Revolt occurred in ________. ", answer: "1381" },
+    { type: "tf", question: "Henry VIII had six wives.", answer: "True" },
+    { type: "mcq", question: "Which wife of Henry VIII gave birth to Edward VI?", options: ["Jane Seymour", "Anne Boleyn", "Catherine Parr"], answer: "Jane Seymour" },
+    { type: "short", question: "What was the name of Henry VIII’s church after the break with Rome?", answer: "Church of England" },
+    { type: "fill", question: "The Spanish ________ attempted to invade England in 1588.", answer: "Armada" },
+    { type: "tf", question: "Elizabeth I ruled for over 40 years.", answer: "True" },
+    { type: "mcq", question: "Who discovered the Americas in 1492?", options: ["Columbus", "Magellan", "Cook"], answer: "Columbus" },
+    { type: "short", question: "Name one reason for Tudor exploration.", answer: "Trade" },
+    { type: "fill", question: "The English Civil War began in ________. ", answer: "1642" },
+
+    // CIVIL WAR & STUARTS (16–30)
+    { type: "mcq", question: "Who led the Parliamentarian forces during the Civil War?", options: ["Oliver Cromwell", "Charles I", "James I"], answer: "Oliver Cromwell" },
+    { type: "short", question: "What was the nickname for Parliament’s soldiers?", answer: "Roundheads" },
+    { type: "fill", question: "Charles I was executed in ________. ", answer: "1649" },
+    { type: "tf", question: "The Restoration brought Charles II to the throne.", answer: "True" },
+    { type: "mcq", question: "What major event hit London in 1666?", options: ["Great Fire", "Plague", "Civil War"], answer: "Great Fire" },
+    { type: "short", question: "Name one cause of the Great Fire of London.", answer: "Dry weather" },
+    { type: "fill", question: "The Glorious Revolution occurred in ________. ", answer: "1688" },
+    { type: "tf", question: "The Bill of Rights limited the power of the monarchy.", answer: "True" },
+    { type: "mcq", question: "Who became monarchs after the Glorious Revolution?", options: ["William and Mary", "Charles II and James II", "Anne and George"], answer: "William and Mary" },
+    { type: "short", question: "What was the name of the new political system after 1688?", answer: "Constitutional monarchy" },
+    { type: "fill", question: "The ________ Act united England and Scotland in 1707.", answer: "Union" },
+    { type: "tf", question: "The Jacobites supported the Stuart claim to the throne.", answer: "True" },
+    { type: "mcq", question: "Which battle ended the Jacobite rising of 1745?", options: ["Culloden", "Hastings", "Bosworth"], answer: "Culloden" },
+    { type: "short", question: "Name one reason for the Jacobite defeat.", answer: "Poor supplies" },
+    { type: "fill", question: "Bonnie Prince ________ led the 1745 rebellion.", answer: "Charlie" },
+
+    // INDUSTRIAL REVOLUTION (31–50)
+    { type: "mcq", question: "Which invention improved steam power?", options: ["Watt engine", "Spinning Jenny", "Telegraph"], answer: "Watt engine" },
+    { type: "short", question: "Define industrialisation.", answer: "Growth of factories and mass production." },
+    { type: "fill", question: "The ________ Jenny was invented by James Hargreaves.", answer: "Spinning" },
+    { type: "tf", question: "Urbanisation increased during the Industrial Revolution.", answer: "True" },
+    { type: "mcq", question: "Which city grew rapidly due to textile production?", options: ["Manchester", "York", "Bath"], answer: "Manchester" },
+    { type: "short", question: "Name one problem in industrial cities.", answer: "Pollution" },
+    { type: "fill", question: "Child labour was common in ________ mills.", answer: "Textile" },
+    { type: "tf", question: "The Factory Acts improved working conditions.", answer: "True" },
+    { type: "mcq", question: "Who invented the steam locomotive ‘Rocket’?", options: ["Stephenson", "Brunel", "Watt"], answer: "Stephenson" },
+    { type: "short", question: "Name one impact of railways.", answer: "Faster transport" },
+    { type: "fill", question: "The ________ Revolution began around 1750.", answer: "Industrial" },
+    { type: "tf", question: "Living conditions in slums were healthy.", answer: "False" },
+    { type: "mcq", question: "Which disease spread rapidly in crowded cities?", options: ["Cholera", "Asthma", "Cancer"], answer: "Cholera" },
+    { type: "short", question: "Who discovered that cholera was waterborne?", answer: "John Snow" },
+    { type: "fill", question: "The ________ Acts aimed to improve public health.", answer: "Public Health" },
+    { type: "mcq", question: "Which engineer built the Great Western Railway?", options: ["Brunel", "Stephenson", "Watt"], answer: "Brunel" },
+    { type: "short", question: "Name one invention that improved communication.", answer: "Telegraph" },
+    { type: "fill", question: "The ________ system replaced hand production.", answer: "Factory" },
+    { type: "tf", question: "Trade unions fought for workers’ rights.", answer: "True" },
+    { type: "mcq", question: "Which law restricted child labour?", options: ["Factory Act", "Poor Law", "Reform Act"], answer: "Factory Act" },
+
+    // WORLD WAR I (51–70)
+    { type: "mcq", question: "Which event triggered WWI?", options: ["Assassination of Franz Ferdinand", "Sinking of Lusitania", "Invasion of Poland"], answer: "Assassination of Franz Ferdinand" },
+    { type: "short", question: "Name one cause of WWI.", answer: "Militarism" },
+    { type: "fill", question: "WWI began in ________. ", answer: "1914" },
+    { type: "tf", question: "Trench warfare was common on the Western Front.", answer: "True" },
+    { type: "mcq", question: "Which countries formed the Triple Entente?", options: ["Britain, France, Russia", "Germany, Austria-Hungary, Italy"], answer: "Britain, France, Russia" },
+    { type: "short", question: "Name one weapon used in WWI.", answer: "Machine guns" },
+    { type: "fill", question: "The Battle of the ________ was one of the bloodiest battles.", answer: "Somme" },
+    { type: "tf", question: "The USA joined the war in 1917.", answer: "True" },
+    { type: "mcq", question: "Which treaty ended WWI?", options: ["Treaty of Versailles", "Treaty of Paris", "Treaty of London"], answer: "Treaty of Versailles" },
+    { type: "short", question: "Name one term of the Treaty of Versailles.", answer: "Germany had to pay reparations." },
+    { type: "fill", question: "The League of ________ was created after WWI.", answer: "Nations" },
+    { type: "tf", question: "WWI caused major political changes in Europe.", answer: "True" },
+    { type: "mcq", question: "Which battle is known for its Christmas Truce?", options: ["Ypres", "Somme", "None"], answer: "None" },
+    { type: "short", question: "Name one impact of WWI on soldiers.", answer: "Shell shock" },
+    { type: "fill", question: "The ________ Front was the main area of fighting.", answer: "Western" },
+    { type: "mcq", question: "Which country left the war in 1917 due to revolution?", options: ["Russia", "Italy", "Turkey"], answer: "Russia" },
+    { type: "short", question: "Name one role women took on during WWI.", answer: "Factory work" },
+    { type: "fill", question: "The British used ________ to encourage men to enlist.", answer: "Propaganda" },
+    { type: "tf", question: "WWI ended in 1918.", answer: "True" },
+    { type: "mcq", question: "Which battle introduced tanks?", options: ["Cambrai", "Somme", "Passchendaele"], answer: "Cambrai" },
+
+    // WORLD WAR II (71–90)
+    { type: "mcq", question: "Which event started WWII?", options: ["Invasion of Poland", "Pearl Harbor", "Battle of Britain"], answer: "Invasion of Poland" },
+    { type: "short", question: "Name one cause of WWII.", answer: "Appeasement" },
+    { type: "fill", question: "WWII began in ________. ", answer: "1939" },
+    { type: "tf", question: "The Blitz targeted British cities.", answer: "True" },
+    { type: "mcq", question: "Which countries formed the Allies?", options: ["Britain, USA, USSR", "Germany, Italy, Japan"], answer: "Britain, USA, USSR" },
+    { type: "short", question: "Name one impact of the Blitz.", answer: "Destruction of homes" },
+    { type: "fill", question: "The Battle of ________ was fought in the air.", answer: "Britain" },
+    { type: "tf", question: "D-Day occurred in 1944.", answer: "True" },
+    { type: "mcq", question: "Which country attacked Pearl Harbor?", options: ["Japan", "Germany", "Italy"], answer: "Japan" },
+    { type: "short", question: "Name one reason rationing was introduced.", answer: "Food shortages" },
+    { type: "fill", question: "The Holocaust targeted ________ people.", answer: "Jewish" },
+    { type: "tf", question: "WWII ended in 1945.", answer: "True" },
+    { type: "mcq", question: "Which cities were hit by atomic bombs?", options: ["Hiroshima and Nagasaki", "Tokyo and Osaka", "Kyoto and Kobe"], answer: "Hiroshima and Nagasaki" },
+    { type: "short", question: "Name one effect of WWII on Britain.", answer: "Evacuation of children" },
+    { type: "fill", question: "The ________ Conference planned post-war Europe.", answer: "Yalta" },
+    { type: "mcq", question: "Which leader was Prime Minister during most of WWII?", options: ["Churchill", "Attlee", "Chamberlain"], answer: "Churchill" },
+    { type: "short", question: "Name one role women had during WWII.", answer: "Land Army" },
+    { type: "fill", question: "The ________ Guard helped fight fires during the Blitz.", answer: "Fire" },
+    { type: "tf", question: "The Battle of Stalingrad was a turning point.", answer: "True" },
+    { type: "mcq", question: "Which country suffered the most casualties?", options: ["USSR", "USA", "France"], answer: "USSR" },
+
+    // MODERN BRITAIN (91–100)
+    { type: "short", question: "Define welfare state.", answer: "Government support for citizens’ wellbeing." },
+    { type: "mcq", question: "Which report led to the NHS?", options: ["Beveridge", "Churchill", "Attlee"], answer: "Beveridge" },
+    { type: "fill", question: "The NHS was founded in ________. ", answer: "1948" },
+    { type: "tf", question: "Immigration increased after WWII.", answer: "True" },
+    { type: "mcq", question: "Which ship brought Caribbean migrants to Britain?", options: ["Empire Windrush", "Mayflower", "Titanic"], answer: "Empire Windrush" },
+    { type: "short", question: "Name one reason for post-war immigration.", answer: "Labour shortages" },
+    { type: "fill", question: "The ________ Act of 1965 banned racial discrimination.", answer: "Race Relations" },
+    { type: "tf", question: "Britain joined the EEC in 1973.", answer: "True" },
+    { type: "mcq", question: "Which conflict involved British troops in 1982?", options: ["Falklands War", "Gulf War", "Korean War"], answer: "Falklands War" },
+    { type: "short", question: "Name one impact of the Falklands War.", answer: "Boosted national morale" }
+);
+
+
 const csQuestions = [];
+const computerScienceQuestions = [
+
+    // FUNDAMENTALS (1–15)
+    { type: "mcq", question: "What does CPU stand for?", options: ["Central Processing Unit", "Computer Power Unit", "Central Program Utility"], answer: "Central Processing Unit" },
+    { type: "short", question: "Define an algorithm.", answer: "A step-by-step set of instructions to solve a problem." },
+    { type: "fill", question: "The ________ is the brain of the computer.", answer: "CPU" },
+    { type: "tf", question: "RAM is volatile memory.", answer: "True" },
+    { type: "mcq", question: "Which storage type is fastest?", options: ["SSD", "HDD", "USB"], answer: "SSD" },
+    { type: "short", question: "What is software?", answer: "Programs that run on a computer." },
+    { type: "fill", question: "The ________ stores data currently in use.", answer: "RAM" },
+    { type: "tf", question: "ROM can be written to many times.", answer: "False" },
+    { type: "mcq", question: "Which is an input device?", options: ["Keyboard", "Monitor", "Speaker"], answer: "Keyboard" },
+    { type: "short", question: "Define hardware.", answer: "Physical components of a computer." },
+    { type: "fill", question: "The ________ controls the flow of data in the CPU.", answer: "Control Unit" },
+    { type: "tf", question: "The ALU performs calculations.", answer: "True" },
+    { type: "mcq", question: "Which is an output device?", options: ["Printer", "Mouse", "Scanner"], answer: "Printer" },
+    { type: "short", question: "What is an embedded system?", answer: "A computer system built into another device." },
+    { type: "fill", question: "A ________ system is built into a washing machine.", answer: "Embedded" },
+
+    // DATA REPRESENTATION (16–30)
+    { type: "mcq", question: "Binary is base ________.", options: ["2", "8", "10"], answer: "2" },
+    { type: "short", question: "Convert 1010 to decimal.", answer: "10" },
+    { type: "fill", question: "A ________ is 8 bits.", answer: "Byte" },
+    { type: "tf", question: "Hexadecimal is base 16.", answer: "True" },
+    { type: "mcq", question: "What is the binary for decimal 7?", options: ["111", "101", "011"], answer: "111" },
+    { type: "short", question: "Define character encoding.", answer: "Mapping characters to binary values." },
+    { type: "fill", question: "ASCII uses ________ bits.", answer: "7" },
+    { type: "tf", question: "Unicode supports more characters than ASCII.", answer: "True" },
+    { type: "mcq", question: "Which is a lossless compression method?", options: ["Run-length encoding", "JPEG", "MP3"], answer: "Run-length encoding" },
+    { type: "short", question: "Define pixel.", answer: "A single point in an image." },
+    { type: "fill", question: "Image ________ determines the number of pixels.", answer: "Resolution" },
+    { type: "tf", question: "Sound is sampled in Hertz.", answer: "True" },
+    { type: "mcq", question: "Which factor affects sound quality?", options: ["Sample rate", "Screen size", "CPU speed"], answer: "Sample rate" },
+    { type: "short", question: "What is colour depth?", answer: "Number of bits used per pixel." },
+    { type: "fill", question: "A ________ file stores sound data.", answer: "WAV" },
+
+    // NETWORKS (31–45)
+    { type: "mcq", question: "What does LAN stand for?", options: ["Local Area Network", "Large Access Node", "Local Application Network"], answer: "Local Area Network" },
+    { type: "short", question: "Define WAN.", answer: "A network over a large geographical area." },
+    { type: "fill", question: "A ________ connects multiple networks together.", answer: "Router" },
+    { type: "tf", question: "Wi-Fi uses radio waves.", answer: "True" },
+    { type: "mcq", question: "Which topology uses a central switch?", options: ["Star", "Bus", "Ring"], answer: "Star" },
+    { type: "short", question: "What is bandwidth?", answer: "Amount of data that can be transferred per second." },
+    { type: "fill", question: "A ________ is a set of rules for communication.", answer: "Protocol" },
+    { type: "tf", question: "HTTP is used for web pages.", answer: "True" },
+    { type: "mcq", question: "Which protocol secures web traffic?", options: ["HTTPS", "FTP", "SMTP"], answer: "HTTPS" },
+    { type: "short", question: "Define IP address.", answer: "A unique identifier for a device on a network." },
+    { type: "fill", question: "A ________ prevents unauthorised access.", answer: "Firewall" },
+    { type: "tf", question: "Bus topology uses a single backbone cable.", answer: "True" },
+    { type: "mcq", question: "Which device forwards packets?", options: ["Switch", "Printer", "Monitor"], answer: "Switch" },
+    { type: "short", question: "Define latency.", answer: "Delay before data transfer begins." },
+    { type: "fill", question: "A ________ is used to connect devices wirelessly.", answer: "Access point" },
+
+    // PROGRAMMING (46–65)
+    { type: "mcq", question: "Which structure repeats code?", options: ["Loop", "Variable", "Function"], answer: "Loop" },
+    { type: "short", question: "Define variable.", answer: "A named storage location for data." },
+    { type: "fill", question: "An ________ statement chooses between options.", answer: "If" },
+    { type: "tf", question: "A boolean stores true or false.", answer: "True" },
+    { type: "mcq", question: "Which operator means 'equal to'?", options: ["==", "!=", ">"], answer: "==" },
+    { type: "short", question: "Define function.", answer: "A reusable block of code." },
+    { type: "fill", question: "A ________ loop repeats until a condition is false.", answer: "While" },
+    { type: "tf", question: "Python uses indentation to structure code.", answer: "True" },
+    { type: "mcq", question: "Which data type stores text?", options: ["String", "Integer", "Boolean"], answer: "String" },
+    { type: "short", question: "What is pseudocode?", answer: "A simplified way of writing algorithms." },
+    { type: "fill", question: "A ________ is a list of items.", answer: "Array" },
+    { type: "tf", question: "A syntax error stops a program from running.", answer: "True" },
+    { type: "mcq", question: "Which loop runs a set number of times?", options: ["For", "While", "If"], answer: "For" },
+    { type: "short", question: "Define iteration.", answer: "Repeating a process." },
+    { type: "fill", question: "A ________ error causes incorrect output.", answer: "Logic" },
+    { type: "mcq", question: "Which symbol starts a comment in Python?", options: ["#", "//", "/*"], answer: "#" },
+    { type: "short", question: "Define casting.", answer: "Converting one data type to another." },
+    { type: "fill", question: "A ________ is a named constant value.", answer: "Constant" },
+    { type: "tf", question: "Functions help reduce repetition.", answer: "True" },
+    { type: "mcq", question: "Which keyword defines a function in Python?", options: ["def", "func", "make"], answer: "def" },
+
+    // CYBER SECURITY (66–80)
+    { type: "mcq", question: "Which attack floods a network with traffic?", options: ["DDoS", "Phishing", "Brute force"], answer: "DDoS" },
+    { type: "short", question: "Define phishing.", answer: "Tricking users into giving personal information." },
+    { type: "fill", question: "A ________ is harmful software.", answer: "Malware" },
+    { type: "tf", question: "Strong passwords improve security.", answer: "True" },
+    { type: "mcq", question: "Which malware encrypts files?", options: ["Ransomware", "Virus", "Worm"], answer: "Ransomware" },
+    { type: "short", question: "Define firewall.", answer: "A system that blocks unauthorised access." },
+    { type: "fill", question: "Two-factor ________ adds extra security.", answer: "Authentication" },
+    { type: "tf", question: "A virus can replicate itself.", answer: "True" },
+    { type: "mcq", question: "Which is a social engineering attack?", options: ["Phishing", "Firewall", "Encryption"], answer: "Phishing" },
+    { type: "short", question: "Define encryption.", answer: "Scrambling data so only authorised users can read it." },
+    { type: "fill", question: "A ________ attack tries many passwords.", answer: "Brute force" },
+    { type: "tf", question: "Worms spread without user action.", answer: "True" },
+    { type: "mcq", question: "Which law protects personal data?", options: ["Data Protection Act", "Computer Misuse Act", "Copyright Act"], answer: "Data Protection Act" },
+    { type: "short", question: "Define penetration testing.", answer: "Testing systems for vulnerabilities." },
+    { type: "fill", question: "The Computer ________ Act covers hacking.", answer: "Misuse" },
+
+    // LOGIC & SYSTEMS (81–100)
+    { type: "mcq", question: "Which logic gate outputs true only if both inputs are true?", options: ["AND", "OR", "NOT"], answer: "AND" },
+    { type: "short", question: "Define logic gate.", answer: "A circuit that performs a logical operation." },
+    { type: "fill", question: "The ________ gate outputs the opposite value.", answer: "NOT" },
+    { type: "tf", question: "OR gate outputs true if at least one input is true.", answer: "True" },
+    { type: "mcq", question: "Which gate outputs true only if inputs differ?", options: ["XOR", "AND", "NOR"], answer: "XOR" },
+    { type: "short", question: "Define operating system.", answer: "Software that manages hardware and applications." },
+    { type: "fill", question: "The ________ manages memory and processes.", answer: "OS" },
+    { type: "tf", question: "Virtual memory uses secondary storage.", answer: "True" },
+    { type: "mcq", question: "Which scheduling method runs tasks in order?", options: ["FIFO", "Round Robin", "Shortest Job"], answer: "FIFO" },
+    { type: "short", question: "Define utility software.", answer: "Software that performs maintenance tasks." },
+    { type: "fill", question: "A ________ is a backup method storing copies off-site.", answer: "Cloud" },
+    { type: "tf", question: "Defragmentation improves HDD performance.", answer: "True" },
+    { type: "mcq", question: "Which device stores the BIOS?", options: ["ROM", "RAM", "CPU"], answer: "ROM" },
+    { type: "short", question: "Define cache.", answer: "Fast memory storing frequently used data." },
+    { type: "fill", question: "The ________ cycle describes CPU operation.", answer: "Fetch-decode-execute" },
+    { type: "tf", question: "Secondary storage is non-volatile.", answer: "True" },
+    { type: "mcq", question: "Which storage is optical?", options: ["CD", "SSD", "HDD"], answer: "CD" },
+    { type: "short", question: "Define cloud computing.", answer: "Using remote servers to store and process data." },
+    { type: "fill", question: "A ________ is a virtual machine running on a host.", answer: "Guest" },
+    { type: "tf", question: "Embedded systems are specialised for one task.", answer: "True" }
+
+];
 
 // Main question bank linking subjects to lists
 const questionBank = {
@@ -1049,6 +1404,24 @@ const questionBank = {
         textAnswer.classList.add("hidden");
         optionsArea.innerHTML = "";
 
+
+        function updateLifetimeStats() {
+    const accuracy = playerProfile.totalAnswered > 0
+        ? Math.round((playerProfile.totalCorrect / playerProfile.totalAnswered) * 100)
+        : 0;
+
+    document.getElementById("lsScore").textContent = "Lifetime Score: " + playerProfile.lifetimeScore;
+    document.getElementById("lsAnswered").textContent = "Total Answered: " + playerProfile.totalAnswered;
+    document.getElementById("lsCorrect").textContent = "Total Correct: " + playerProfile.totalCorrect;
+    document.getElementById("lsAccuracy").textContent = "Accuracy: " + accuracy + "%";
+}
+function setAvatar(avatar) {
+    playerProfile.avatar = avatar;
+    localStorage.setItem("playerProfile", JSON.stringify(playerProfile));
+    document.getElementById("currentAvatar").src = avatar;
+}
+
+
         const questions = questionBank[currentSubject];
         if (!questions || questions.length === 0) {
             questionText.textContent = "No questions available for this subject yet.";
@@ -1085,6 +1458,13 @@ const questionBank = {
             textAnswer.classList.remove("hidden");
         }
     }
+
+    function showProfile() {
+    updateLifetimeStats();
+    document.getElementById("profilePage").classList.remove("hidden");
+    document.getElementById("questionPage").classList.add("hidden");
+}
+
     function similarityScore(userAns, correctAns) {
     // Lowercase + remove punctuation
     userAns = userAns.toLowerCase().trim().replace(/[^\w\s]/g, "");
@@ -1110,11 +1490,16 @@ const questionBank = {
     const userAns = document.getElementById("textAnswer").value.trim();
     const answerMessage = document.getElementById("answerMessage");
     const scoreDisplay = document.getElementById("scoreDisplay");
+    let isCorrect = false;
+
     
 
     if (!currentQuestion) {
+
         answerMessage.textContent = "No question loaded.";
         answerMessage.style.color = "red";
+        isCorrect = true;
+
         return;
     }
 
@@ -1124,6 +1509,7 @@ const questionBank = {
             answerMessage.textContent = "Correct!";
             answerMessage.style.color = "green";
             score++;
+            isCorrect = true;
         } else {
             answerMessage.textContent = "Incorrect. Correct answer: " + currentQuestion.answer;
             answerMessage.style.color = "red";
@@ -1138,6 +1524,7 @@ const questionBank = {
             answerMessage.textContent = "Correct!";
             answerMessage.style.color = "green";
             score++;
+            isCorrect = true;
         } else {
             answerMessage.textContent = "Incorrect. Correct answer: " + currentQuestion.answer;
             answerMessage.style.color = "red";
@@ -1154,6 +1541,7 @@ const questionBank = {
             answerMessage.textContent = "Correct!";
             answerMessage.style.color = "green";
             score++;
+            isCorrect = true;
         } else {
             answerMessage.textContent = "Incorrect. Correct answer: " + currentQuestion.answer;
             answerMessage.style.color = "red";
@@ -1162,6 +1550,17 @@ const questionBank = {
         scoreDisplay.textContent = "Score: " + score;
         return;
     }
+
+    playerProfile.totalAnswered++;
+
+if (isCorrect) {
+    playerProfile.totalCorrect++;
+    playerProfile.lifetimeScore += 10; // reward points
+}
+
+localStorage.setItem("playerProfile", JSON.stringify(playerProfile));
+updateLifetimeStats();
+
 }
 
 function showIdealAnswer() {
